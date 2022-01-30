@@ -135,6 +135,7 @@ $('.bri-copy').click(function() {
     $temp.val($('.bri').text()).select();
     document.execCommand("copy");
     $temp.remove();
+    toastr.options.positionClass = 'toast-bottom-center';
     toastr.success('Berhasil di copy!')
 })
 
@@ -144,6 +145,7 @@ $('.dana-copy').click(function() {
     $temp.val($('.dana').text()).select();
     document.execCommand("copy");
     $temp.remove();
+    toastr.options.positionClass = 'toast-bottom-center';
     toastr.success('Berhasil di copy!')
 })
 

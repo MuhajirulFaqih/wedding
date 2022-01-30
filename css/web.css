@@ -147,10 +147,6 @@ hr { background-color: #DEDFE2; }
 
 .copy {
     cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: .5em;
-    z-index: 3;
 }
 
 .content.active {
