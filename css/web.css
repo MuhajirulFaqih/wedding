@@ -210,6 +210,7 @@ hr { background-color: #DEDFE2; }
 
 .scroll-down .scroll-button-bg {
     background: #DBDBDC;
+    overflow: hidden;
     padding: 5px;
     border-radius: 20px;
     min-height: 50px;
@@ -219,9 +220,14 @@ hr { background-color: #DEDFE2; }
 
 .scroll-down .scroll-button-circle {
     width: 15px;
+    transition: all .5s;
     height: 15px;
     border-radius: 50%;
     background: #07082F;
+}
+.scroll-down .scroll-button-circle {
+    -webkit-animation: scroll-bounce 2s ease-in-out infinite;
+    animation: scroll-bounce 2s ease-in-out infinite;
 }
 .map {
     height: 250px;

@@ -163,6 +163,12 @@ var receivedName = getUrlVars()['name'];
 var receivedAddress = getUrlVars()['address'];
 
 if(typeof receivedName != 'undefined' && typeof receivedAddress != 'undefined') {
-    $('.received').text(receivedName);
-    $('.address').text(receivedAddress);
+    $('.received').text(unescape(receivedName));
+    $('.address').text(unescape(receivedAddress));
 }
+
+$(".scroll-down").click(function() {
+    $("html,body").animate({
+        scrollTop: $('#content').offset().top
+    }, 100);
+});
