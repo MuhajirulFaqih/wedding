@@ -78,6 +78,7 @@ hr { background-color: #DEDFE2; }
 }
 .fs-date {
     font-size: 90px;
+    padding-right: 10px;
     line-height: 100%;
 }
 .fs-year {
@@ -143,6 +144,7 @@ hr { background-color: #DEDFE2; }
     position: absolute;
     bottom: 0;
     right: 1em;
+    z-index: 0;
 }
 
 .copy {
@@ -234,43 +236,148 @@ hr { background-color: #DEDFE2; }
     background: #E0DDFF;
     color: #5046C5;
 }
+.audio-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    top: 2em;
+    right: 2em;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0px 37px 28px rgba(172, 175, 200, 0.21);
+    padding: 15px;
+}
 
 /* `sm` applies to small devices (landscape phones, less than 576px) */
 @media (min-width: 576px) {
-    .container {
-        max-width: 370px !important;
-        margin: 0 auto;
+    #splash {
+        overflow-y: auto;
+    }
+
+    .fs-header {
+        font-size: 60px;
+    }
+    .fs-sm-1 {
+        font-size: 12px !important;
+        line-height: 19px;
+    }
+    .fs-sm-2 {
+        font-size: 14px !important;
+        line-height: 21px;
+    }
+    .fs-sm-3 {
+        font-size: 16px !important;
+        line-height: 24px;
+    }
+    .fs-sm-4 {
+        font-size: 18px !important;
+        line-height: 27px;
+    }
+    .fs-sm-5 {
+        font-size: 20px !important;
+        line-height: 30px;
+    }
+    #pay .pay-pattern {
+        width: 25% !important;
+    }
+
+    .fade-right-element::before, .fade-left-element::before {
+        content: none !important;
+    }
+
+    .splash-pattern {
+        position: absolute;
+        right: 30%;
+        top: 4em;
+        width: 30% !important;
     }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (min-width: 768px) {
     .container {
-        max-width: 370px !important;
+        max-width: 700px !important;
         margin: 0 auto;
+    }
+    .h-md-100 {
+        height: 100%;
+        width: 100%;
+    }
+    #splash {
+        overflow-y: hidden;
+    }
+    #splash, #welcome, #content, #closing {
+        min-height: 50vh !important;
+    }
+    .justify-content-md-center  {
+        justify-content: center;
+    }
+    .align-items-md-center {
+        align-items: center;
     }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (min-width: 992px) {
-    .container {
-        max-width: 370px !important;
-        margin: 0 auto;
+    :root {
+        font-size: 16px;
+    }
+    .fs-header {
+        font-size: 80px !important;
+        line-height: 100%;
     }
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (min-width: 1200px) {
+    #welcome {
+        min-height: 100vh !important;
+    }
+    #content, #closing, #pay {
+        min-height: 100vh !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .container {
-        max-width: 370px !important;
+        max-width: 1000px !important;
         margin: 0 auto;
+    }
+    .fs-header {
+        font-size: 100px;
+    }
+    .mt-xl-8 {
+        margin-top: 8em !important;
+    }
+    .fs-xl-8 {
+        font-size: 40px !important;
+        line-height: 120%;
+    }
+    .splash-pattern {
+        position: absolute;
+        right: 30%;
+        top: 4em;
+        width: 25% !important;
+    }
+    #pay .pay-pattern {
+        width: 10% !important;
+    }
+    .scroll-down {
+        bottom: 5em;
     }
 }
 
-/* `xxxl` applies to x-large devices (large desktops, less than 1900px) */
-@media (min-width: 1900px) {
-    .container {
-        max-width: 370px !important;
-        margin: 0 auto;
+/* `xxl` applies to x-large devices (large desktops, less than 1900px) */
+@media (min-width: 1400px) {
+    #content, #closing, #pay {
+        min-height: 50vh !important;
+    }    
+    .h-xxl-100 {
+        height: 100%;
     }
 }
